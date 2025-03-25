@@ -1,5 +1,5 @@
 {
-    "characters": [
+    "books": [
       {
         "id": 1,
         "name": "The 48 Laws of Power",
@@ -38,6 +38,15 @@
 
       {
         "id": 5,
+        "name": "The Power of Your Subconscious Mind",
+        "image": "https://covers.openlibrary.org/b/id/14845209-M.jpg",
+        "author": "Joseph Murphy",
+        "pages": 224,
+        "publication": 1963
+      },
+
+      {
+        "id": 6,
         "name": "The Psychology of Money",
         "image": "https://covers.openlibrary.org/b/id/14653525-M.jpg",
         "author": "Morgan Housel",
