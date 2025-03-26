@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         books = data; 
         if (books.length > 0){
             displayBookDetails(books[0]);
-            renderBookList();  
+            renderBookList(books);  
         }
         
     });
@@ -37,9 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
 
-    function renderBookList() {
+    function renderBookList(bookArray) {
       booksContainer.innerHTML = '';
-      books.forEach(book => {
+      bookArray.forEach(book => {
         
         const bookItem = document.createElement('div');
         bookItem.classList.add('book-list-item');
@@ -71,16 +71,21 @@ document.addEventListener('DOMContentLoaded', () => {
         displayBookDetails(book);   
     }
   
-    // Filter books on search input
     searchInput.addEventListener('input', () => {
       const searchTerm = searchInput.value.toLowerCase();
       const filtered =books.filter(book => book.name.toLowerCase().includes(searchTerm));
 
       if (filtered.length > 0) {
-        renderFilteredBooks(filtered);
+        renderBookList(filtered);
       }
       else{
-        booksContainer.innnerHtml = '<p>Your book not found</p>';
+        booksContainer.innnerHtml = '';
+        const msg = document.createElement('div');
+        msg.textContent = 'Your book is not found!';
+        msg.style.color = 'red';
+        msg.style.textAlign = 'center';
+        booksContainer. appendChild(msg);
+
       }
     });
 
