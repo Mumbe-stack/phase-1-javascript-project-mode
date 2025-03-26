@@ -1,58 +1,53 @@
 {
-    "books": [
-      {
-        "id": 1,
-        "name": "The 48 Laws of Power",
-        "image":"https://upload.wikimedia.org/wikipedia/en/9/9d/GreeneRobert-48LawsOfPower.jpg",
-        "author": "Robert Greene",
-        "pages": 480,
-        "publication": 1998
-      },
-
-      {
-        "id": 2,
-        "name": "Control Your Mind and Master Your Feelings",
-        "image": "https://books.google.co.ke/books/publisher/content?id=MzKyDwAAQBAJ&pg=PA1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U02LtN0Udt53nm5tIMhVCSA7pq5Ag&w=1280",
-        "author": "Eric Robertson",
-        "pages": 230,
-        "publication": 2019
-      },
-
-      {
-        "id": 3,
-        "name": "Rich Dad Poor Dad",
-        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Rich_Dad_Poor_Dad.jpg/250px-Rich_Dad_Poor_Dad.jpg",
-        "author": "Robert Kiyosaki and Sharon L. Lechter",
-        "pages": 336,
-        "publication": 2000
-      },
-      
-      {
-        "id": 4,
-        "name": "Think and Grow Rich",
-        "image": "https://covers.openlibrary.org/b/id/14542529-M.jpg",
-        "author": "Napoleon Hill",
-        "pages": 238,
-        "publication": 1937
-      },
-
-      {
-        "id": 5,
-        "name": "The Power of Your Subconscious Mind",
-        "image": "https://covers.openlibrary.org/b/id/14845209-M.jpg",
-        "author": "Joseph Murphy",
-        "pages": 224,
-        "publication": 1963
-      },
-
-      {
-        "id": 6,
-        "name": "The Psychology of Money",
-        "image": "https://covers.openlibrary.org/b/id/14653525-M.jpg",
-        "author": "Morgan Housel",
-        "pages": 256,
-        "publication": 2020
-      }
-    ]
-  }
-  
+  "books": [
+    {
+      "id": "1",
+      "name": "The 48 Laws of Power",
+      "image": "https://upload.wikimedia.org/wikipedia/en/9/9d/GreeneRobert-48LawsOfPower.jpg",
+      "author": "Robert Greene",
+      "pages": 480,
+      "publication": 1998
+    },
+    {
+      "id": "2",
+      "name": "Control Your Mind and Master Your Feelings",
+      "image": "https://books.google.co.ke/books/publisher/content?id=MzKyDwAAQBAJ&pg=PA1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U02LtN0Udt53nm5tIMhVCSA7pq5Ag&w=1280",
+      "author": "Eric Robertson",
+      "pages": 230,
+      "publication": 2019
+    },
+    {
+      "id": "3",
+      "name": "Rich Dad Poor Dad",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Rich_Dad_Poor_Dad.jpg/250px-Rich_Dad_Poor_Dad.jpg",
+      "author": "Robert Kiyosaki and Sharon L. Lechter",
+      "pages": 336,
+      "publication": 2000
+    },
+    {
+      "id": "4",
+      "name": "Think and Grow Rich",
+      "image": "https://covers.openlibrary.org/b/id/14542529-M.jpg",
+      "author": "Napoleon Hill",
+      "pages": 238,
+      "publication": 1937
+    },
+    {
+      "id": "5",
+      "name": "The Power of Your Subconscious Mind",
+      "image": "https://covers.openlibrary.org/b/id/14845209-M.jpg",
+      "author": "Joseph Murphy",
+      "pages": 224,
+      "publication": 1963
+    },
+    {
+      "id": "6",
+      "name": "The Psychology of Money",
+      "image": "https://covers.openlibrary.org/b/id/14653525-M.jpg",
+      "author": "Morgan Housel",
+      "pages": 256,
+      "publication": 2020
+    }
+   
+  ]
+}
