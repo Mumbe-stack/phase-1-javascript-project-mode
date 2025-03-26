@@ -73,6 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
   
     searchInput.addEventListener('input', () => {
       const searchTerm = searchInput.value.toLowerCase();
+      booksContainer.innerHTML = '';
+
       const filtered =books.filter(book => book.name.toLowerCase().includes(searchTerm));
 
       if (filtered.length > 0) {
