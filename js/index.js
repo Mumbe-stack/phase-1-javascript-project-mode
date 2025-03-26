@@ -74,11 +74,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // Filter books on search input
     searchInput.addEventListener('input', () => {
       const searchTerm = searchInput.value.toLowerCase();
-      const foundBook = books.find(book => book.name.toLowerCase().includes(searchTerm));
-      if (foundBook) {
-        displayBookDetails(foundBook);
+      const filtered =books.filter(book => book.name.toLowerCase().includes(searchTerm));
+
+      if (filtered.length > 0) {
+        renderFilteredBooks(filtered);
+      }
+      else{
+        booksContainer.innnerHtml = '<p>Your book not found</p>';
       }
     });
+
+    function renderFilteredBooks(filetredBooks) {
+        booksContainer.innerHTML = '';
+        filetredBooks.forEach(book => {
+            const bookitem = document.createElement('div');
+            bookItem.classList.add('book-list-item');
+        })
+    }
   
     // Handle form submission to add new book
     form.addEventListener('submit', (event) => {
