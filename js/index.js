@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
       bookPublication.textContent = `Published: ${book.publication}`;
     }
   
-    // Render the list of all books
+
     function renderBookList() {
       booksContainer.innerHTML = '';
       books.forEach(book => {
@@ -49,6 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
         img.addEventListener('click', () => displayBookDetails(book));
         booksContainer.appendChild(img);
       });
+    }
+
+    function handleClick(book, event) {
+        event.preventDefault ();
+        displayBookDetails(book);   
     }
   
     // Filter books on search input
