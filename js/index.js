@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
   
-    // Handle form submission to add new book
+   
     form.addEventListener('submit', (event) => {
       event.preventDefault();
   
