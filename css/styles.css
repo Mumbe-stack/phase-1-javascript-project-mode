@@ -7,3 +7,123 @@ body{
     font-size: large;
     color: blueviolet;
 }
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: large;
+    color: blueviolet;
+  }
+  
+  #heading {
+    font-size: 2rem;
+    color: #222;
+  }
+  
+  /* Search Section */
+  #search {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #search input {
+    padding: 10px;
+    width: 60%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Book List */
+  #book-list {
+    margin-bottom: 30px;
+    
+  }
+  
+  #book-list h2 {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #books-container {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #books-container li {
+    padding: 10px;
+    background-color: white;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #books-container li:hover {
+    background-color: #e8e8e8;
+  }
+  
+  /* Book Details */
+  .book-details {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  }
+  
+  .book-details img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+  
+  /* Form Section */
+  .form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  }
+  
+  .form h2 {
+    margin-bottom: 15px;
+  }
+  
+  #bookForm input,
+  #bookForm button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #bookForm button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #bookForm button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Responsive Layout */
+  @media (min-width: 768px) {
+    .book-details,
+    .form {
+      width: 60%;
+      margin: 0 auto 30px auto;
+    }
+  
+    #search input {
+      width: 50%;
+    }
+  }
