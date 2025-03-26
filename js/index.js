@@ -49,8 +49,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const img = document.createElement('img');
         img.src= book.image;
-        //img.alt = book.name;
-        
+        img.alt = book.name;
+
+        img.style.width = '50px';
+        img.style.height = '75px';
+        img.style.objectFit = 'cover';
+        img.style.marginRight = '10px'
+
         const title = document.createElement('span');
         title.textContent = book.name;
 
