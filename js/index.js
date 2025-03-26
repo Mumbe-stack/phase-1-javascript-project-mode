@@ -42,12 +42,24 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderBookList() {
       booksContainer.innerHTML = '';
       books.forEach(book => {
+        
+        const bookItem = document.createElement('div');
+        bookItem.classList.add('book-list-item');
+        bookItem.style.cursor ='pointer'
+
         const img = document.createElement('img');
-        img.source = book.image;
-        img.alt = book.name;
-        img.title = book.name;
-        img.addEventListener('click', () => displayBookDetails(book));
-        booksContainer.appendChild(img);
+        img.src= book.image;
+        //img.alt = book.name;
+        
+        const title = document.createElement('span');
+        title.textContent = book.name;
+
+        bookItem.appendChild(img);
+        bookItem.appendChild(title);
+
+        bookItem.addEventListener('click', (event) => handleClick(book, event));
+
+        booksContainer.appendChild(bookItem);
       });
     }
 
