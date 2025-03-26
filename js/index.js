@@ -51,8 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
         img.src= book.image;
         img.alt = book.name;
 
-        img.style.width = '50px';
-        img.style.height = '75px';
+        img.style.width = '30px';
+        img.style.height = '45px';
         img.style.objectFit = 'cover';
         img.style.marginRight = '10px'
 
@@ -83,8 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   
     // Handle form submission to add new book
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
   
       const newBook = {
         name: document.getElementById('new-name').value,

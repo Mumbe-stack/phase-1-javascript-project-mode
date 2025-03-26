@@ -37,6 +37,15 @@ body{
   #book-list {
     margin-bottom: 30px;
     
+    
+  }
+
+  .book-list-item{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    
   }
   
   #book-list h2 {
@@ -50,22 +59,25 @@ body{
   #books-container {
     display: flex;
     flex-direction: row;
+    padding: 10px;
     justify-content: center;
-    align-items: center;
-    list-style: none;
-    padding: 0;
+    align-content: center;
+    border-radius: 50%;
+    
+    
   }
   
-  #books-container li {
+  #books-container img {
     padding: 10px;
-    /* background-color: white; */
+    background-color: bisque;
     margin-bottom: 5px;
-    border-radius: 5px;
-    /* cursor: pointer; */
+    border-radius: 3opx;
+    width: 80px;
+    cursor: pointer;
   }
   
   #books-container img:hover {
-    background-color: #e8e8e8;
+    background-color: white;
     width: 80px;
     margin-top: 10px;
     cursor: pointer;
@@ -91,35 +103,48 @@ body{
   
   /* Form Section */
   .form {
-    background-color: #fff;
+    background-color: blue;
     padding: 20px;
     border-radius: 5px;
+    
   }
   
   .form h2 {
     margin-bottom: 15px;
   }
   
-  #bookForm input,
-  #bookForm button {
-    display: block;
+  #bookForm input{
+    display: flex;
+    flex-direction: column;
     width: 100%;
     margin-bottom: 10px;
     padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  #bookForm button {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
   }
   
   #bookForm button {
-    background-color: #4CAF50;
-    color: white;
+    background-color: green;
     border: none;
     cursor: pointer;
   }
   
   #bookForm button:hover {
-    background-color: #45a049;
+    background-color: greenyellow;
   }
   
   /* Responsive Layout */
