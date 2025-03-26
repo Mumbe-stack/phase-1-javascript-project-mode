@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         publication: parseInt(document.getElementById('new-publication').value)
       };
   
-      fetch(base_URL_URL, {
+      fetch(base_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newBook)
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(book => {
         books.push(book);
         renderBookList();
-        displayBookDetails(book); // show the newly added book
+        displayBookDetails(book); 
         form.reset();
       });
     });
