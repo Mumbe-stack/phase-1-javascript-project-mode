@@ -12,9 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     const booksContainer = document.getElementById('books-container');
   
-    let books = [];
-  
-    // Fetch books from db.json
+ 
     fetch (base_URL)
 
     .then(res=> res.json())
@@ -29,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
   
-    // Display details of a book
+   
     function displayBookDetails(book) {
       bookName.textContent = book.name;
       bookImage.src = book.image;
