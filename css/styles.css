@@ -61,8 +61,11 @@ body{
     transition: background-color 0.3s ease;
   }
   
-  #books-container li:hover {
+  #books-container img:hover {
     background-color: #e8e8e8;
+    width: 80px;
+    margin-top: 10px;
+    cursor: pointer;
   }
   
   /* Book Details */

@@ -1,49 +1,53 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const base_URL = 'http://localhost:3000/books';
+    //const base_URL = 'http://localhost:3000/books';
   
     const searchInput = document.querySelector('#search input');
     const form = document.getElementById('bookForm');
   
-    const bookNameEl = document.getElementById('book-name');
-    const bookImageEl = document.getElementById('book-image');
-    const bookAuthorEl = document.getElementById('book-author');
-    const bookPagesEl = document.getElementById('book-pages');
-    const bookPublicationEl = document.getElementById('publication-year');
+    const bookName = document.getElementById('book-name');
+    const bookImage = document.getElementById('book-image');
+    const bookAuthor = document.getElementById('book-author');
+    const bookPages = document.getElementById('book-pages');
+    const bookPublication = document.getElementById('publication-year');
   
     const booksContainer = document.getElementById('books-container');
   
     let books = [];
   
     // Fetch books from db.json
-    fetch (base_URL)
+    fetch ('http://localhost:3000/books')
 
     .then(res=> res.json())
 
-    .then(books => {
-        books; 
-        displayBookDetails(books[0]);
-        renderBookList();
+    .then(data => {
+        books = data; 
+        if (books.length > 0){
+            displayBookDetails(books[0]);
+            renderBookList();  
+        }
+        
     });
     
   
     // Display details of a book
     function displayBookDetails(book) {
-      bookNameEl.textContent = book.name;
-      bookImageEl.src = book.image;
-      bookAuthorEl.textContent = `Author: ${book.author}`;
-      bookPagesEl.textContent = `Pages: ${book.pages}`;
-      bookPublicationEl.textContent = `Published: ${book.publication}`;
+      bookName.textContent = book.name;
+      bookImage.src = book.image;
+      bookAuthor.textContent = `Author: ${book.author}`;
+      bookPages.textContent = `Pages: ${book.pages}`;
+      bookPublication.textContent = `Published: ${book.publication}`;
     }
   
     // Render the list of all books
     function renderBookList() {
       booksContainer.innerHTML = '';
       books.forEach(book => {
-        const li = document.createElement('li');
-        li.textContent = book.name;
-        li.style.cursor = 'pointer';
-        li.addEventListener('click', () => displayBookDetails(book));
-        booksContainer.appendChild(li);
+        const img = document.createElement('img');
+        img.source = book.image;
+        img.alt = book.name;
+        img.title = book.name;
+        img.addEventListener('click', () => displayBookDetails(book));
+        booksContainer.appendChild(img);
       });
     }
   
@@ -68,11 +72,12 @@ document.addEventListener('DOMContentLoaded', () => {
         publication: parseInt(document.getElementById('new-publication').value)
       };
   
-      fetch(BASE_URL, {
+      fetch(base_URL_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newBook)
       })
+
       .then(res => res.json())
       .then(book => {
         books.push(book);
