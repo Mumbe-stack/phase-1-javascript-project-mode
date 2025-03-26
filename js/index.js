@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    //const base_URL = 'http://localhost:3000/books';
+    const base_URL = 'http://localhost:3000/books';
   
     const searchInput = document.querySelector('#search input');
     const form = document.getElementById('bookForm');
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let books = [];
   
     // Fetch books from db.json
-    fetch ('http://localhost:3000/books')
+    fetch (base_URL)
 
     .then(res=> res.json())
 

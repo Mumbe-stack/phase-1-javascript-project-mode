@@ -6,12 +6,12 @@ body{
     font-style: normal;
     font-size: large;
     color: blueviolet;
+    background-color: aqua;
 }
   header {
     text-align: center;
     margin-bottom: 30px;
-    font-size: large;
-    color: blueviolet;
+    font-size: xx-large;
   }
   
   #heading {
@@ -48,17 +48,20 @@ body{
   }
   
   #books-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     list-style: none;
     padding: 0;
   }
   
   #books-container li {
     padding: 10px;
-    background-color: white;
+    /* background-color: white; */
     margin-bottom: 5px;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    /* cursor: pointer; */
   }
   
   #books-container img:hover {
@@ -70,11 +73,14 @@ body{
   
   /* Book Details */
   .book-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: white;
     padding: 20px;
     border-radius: 5px;
     margin-bottom: 30px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
   }
   
   .book-details img {
@@ -88,7 +94,6 @@ body{
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
   }
   
   .form h2 {
@@ -111,7 +116,6 @@ body{
     color: white;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
   }
   
   #bookForm button:hover {
