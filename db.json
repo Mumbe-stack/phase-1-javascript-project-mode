@@ -6,7 +6,8 @@
       "image": "https://upload.wikimedia.org/wikipedia/en/9/9d/GreeneRobert-48LawsOfPower.jpg",
       "author": "Robert Greene",
       "pages": 480,
-      "publication": 1998
+      "publication": 1998,
+      "likes": 2
     },
     {
       "id": "2",
@@ -48,6 +49,5 @@
       "pages": 256,
       "publication": 2020
     }
-   
   ]
 }
