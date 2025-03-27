@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const base_URL = 'https://phase-1-javascript-project-mode-sigma.vercel.app/';
+    const base_URL = 'http://localhost:3000/books';
   
     const searchInput = document.querySelector('#search input');
     const form = document.getElementById('bookForm');
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
         booksContainer.innerHTML = '';
         filetredBooks.forEach(book => {
             const bookitem = document.createElement('div');
-            bookItem.classList.add('book-list-item');
+            bookitem.classList.add('book-list-item');
         })
     }
   
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       .then(res => res.json())
       .then(book => {
-        books.push(book);
+        newBook.push(book);
         renderBookList();
         displayBookDetails(book); 
         form.reset();
