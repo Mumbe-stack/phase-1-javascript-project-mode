@@ -26,5 +26,5 @@
 - Run browser or go live through the vs code terminal.
 
 # Author
-Mercy Mumbe ([https://github.com/Mumbe-stack/phase-1-javascript-project-mode?tab=readme-ov-file][https://phase-1-javascript-project-mode-cu2x.vercel.app/]).
+Mercy Mumbe ([https://github.com/Mumbe-stack/phase-1-javascript-project-mode?tab=readme-ov-file][https://phase-1-javascript-project-mode-1h87.vercel.app/]).
 

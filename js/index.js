@@ -32,22 +32,24 @@ document.addEventListener('DOMContentLoaded', function () {
   
    
     function displayBookDetails(book) {
-      currentBook = book;
-      bookName.textContent = book.name || '';
-      bookImage.src = book.image || '';
-      bookAuthor.textContent = 'Author: ' + (book.author || '');
-      bookPages.textContent = 'Pages: ' + (book.pages || '');
-      bookPublication.textContent = 'Published: ' + (book.publication || '');
+        bookName.textContent = book.name;
+        bookImage.src = book.image;
+        bookAuthor.textContent = `Author: ${book.author}`;
+        bookPages.textContent = `Pages: ${book.pages}`;
+        bookPublication.textContent = `Published: ${book.publication}`;
     }
   
     
     function renderBookList(bookArray) {
       booksContainer.innerHTML = '';
-      bookArray.forEach(function (book) {
-        var img = document.createElement('img');
-        img.src = book.image;
-        img.alt = book.name;
-        img.title = book.name;
+      bookArray.forEach(book => {
+         
+        const bookItem = document.createElement('div');
+        bookItem.classList.add('book-list-item');
+        bookItem.style.cursor ='pointer'
+
+        const img = document.createElement('img');
+        img.src= book.image;
         img.style.width = '100px';
         img.style.margin = '10px';
         img.style.cursor = 'pointer';
@@ -62,8 +64,8 @@ document.addEventListener('DOMContentLoaded', function () {
   
     
     searchInput.addEventListener('input', function () {
-      var searchTerm = searchInput.value.toLowerCase();
-      var filtered = books.filter(function (book) {
+      const searchTerm = searchInput.value.toLowerCase();
+      const filtered = books.filter(function (book) {
         return book.name.toLowerCase().includes(searchTerm);
       });
   
@@ -71,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (filtered.length > 0) {
         displayBookDetails(filtered[0]);
       } else {
-        booksContainer.innerHTML = '<p style="color:red;">No book found!</p>';
+        booksContainer.innerHTML = '<p style="color:red;">Book not found!</p>';
       }
     });
   
@@ -79,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', function (event) {
       event.preventDefault();
   
-      var newBook = {
+      const newBook = {
         name: document.getElementById('new-name').value,
         author: document.getElementById('new-author').value,
         image: document.getElementById('new-image').value,
