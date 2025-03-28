@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const bookAuthor = document.getElementById('book-author');
   const bookPages = document.getElementById('book-pages');
   const bookPublication = document.getElementById('publication-year');
+  const likesCount = document.getElementById('likes-count');
 
   const booksContainer = document.getElementById('books-container');
   const likeBtn = document.getElementById('like-btn');
@@ -39,7 +40,8 @@ document.addEventListener('DOMContentLoaded', function () {
       bookAuthor.textContent = `Author: ${book.author}`;
       bookPages.textContent = `Pages: ${book.pages}`;
       bookPublication.textContent = `Published: ${book.publication}`;
-      likeBtn.textContent = `Like (${book.likes || 0})`;
+      likesCount.textContent = `Likes: ${book.likes || 0}`;
+      likeBtn.textContent = 'Like';
      
   }
 
@@ -127,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(response => response.json())
       .then(updatedBook => {
         currentBook.likes = updatedBook.likes;
-        likeBtn.textContent = `Like (${updatedBook.likes})`;
+        likesCount.textContent = `Likes: ${updatedBook.likes}`;
       });
       
   });
