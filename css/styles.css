@@ -76,7 +76,6 @@ body{
   
   #books-container img:hover {
     background-color: white;
-    width: 0px;
     margin-top: 10px;
     cursor: pointer;
   }
