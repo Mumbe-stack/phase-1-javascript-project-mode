@@ -120,10 +120,10 @@ document.addEventListener('DOMContentLoaded', function () {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ likes: newLikes })
     })
-      then(response => response.json())
+      .then(response => response.json())
       .then(updatedBook => {
         currentBook.likes = updatedBook.likes;
-        likeBtn.textContent = 'Like (${updatedBook.likes})';
+        likeBtn.textContent = `Like (${updatedBook.likes})`;
       });
   });
 
