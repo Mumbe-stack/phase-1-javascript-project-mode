@@ -39,6 +39,8 @@ document.addEventListener('DOMContentLoaded', function () {
       bookAuthor.textContent = `Author: ${book.author}`;
       bookPages.textContent = `Pages: ${book.pages}`;
       bookPublication.textContent = `Published: ${book.publication}`;
+      likeBtn.textContent = `Like (${book.likes || 0})`;
+     
   }
 
   
@@ -111,9 +113,11 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   
-  likeBtn.addEventListener('click', function () {
+  likeBtn.addEventListener('click', function (event) {
+    event.preventDefault();
     if (!currentBook) return;
     let newLikes = (currentBook.likes || 0) + 1;
+   
 
     fetch(`${base_URL}/${currentBook.id}`, {
       method: 'PATCH',
@@ -125,6 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
         currentBook.likes = updatedBook.likes;
         likeBtn.textContent = `Like (${updatedBook.likes})`;
       });
+      
   });
 
   
