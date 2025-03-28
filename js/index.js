@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const base_URL = 'http://localhost:3000/books';
+  const base_URL = 'https://end-of-phase-project-backend.vercel.app/books';
 
   const searchInput = document.querySelector('#search input');
   const form = document.getElementById('bookForm');
