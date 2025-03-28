@@ -58,6 +58,7 @@ body{
   #books-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     padding: 10px;
     justify-content: center;
     align-content: center;
@@ -89,7 +90,7 @@ body{
     padding: 20px;
     border-radius: 5px;
     margin: 0 auto;
-    width: 70%;
+    max-width: 3000%;
   }
   
   .book-details img {
@@ -150,6 +151,7 @@ body{
     .form {
       width: 60%;
       margin: 0 auto 30px auto;
+      padding: auto;
     }
   
     #search input {
